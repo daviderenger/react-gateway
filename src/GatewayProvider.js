@@ -1,12 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import GatewayRegistry from './GatewayRegistry';
 
 export default class GatewayProvider extends React.Component {
-  static childContextTypes = {
-    gatewayRegistry: PropTypes.instanceOf(GatewayRegistry).isRequired
-  };
-
   getChildContext() {
     return {
       gatewayRegistry: this.gatewayRegistry
